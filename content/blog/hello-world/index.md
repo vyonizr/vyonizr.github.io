@@ -2,6 +2,9 @@
 title: Hello World
 date: "2015-05-01T22:12:03.284Z"
 description: "Hello World"
+tags: [random]
+categories: [a, b]
+link: http://www.google.com
 ---
 
 This is my first post on my new fake blog! How exciting!

@@ -1,69 +1,49 @@
 import React from "react"
-import { Link } from "gatsby"
+import { StaticQuery, graphql, Link } from "gatsby"
 
-import { rhythm, scale } from "../utils/typography"
-
-const Layout = ({ location, title, children }) => {
-  const rootPath = `${__PATH_PREFIX__}/`
-  let header
-
-  if (location.pathname === rootPath) {
-    header = (
-      <h1
-        style={{
-          ...scale(1.5),
-          marginBottom: rhythm(1.5),
-          marginTop: 0,
-        }}
-      >
-        <Link
-          style={{
-            boxShadow: `none`,
-            color: `inherit`,
-          }}
-          to={`/`}
-        >
-          {title}
-        </Link>
-      </h1>
-    )
-  } else {
-    header = (
-      <h3
-        style={{
-          fontFamily: `Montserrat, sans-serif`,
-          marginTop: 0,
-        }}
-      >
-        <Link
-          style={{
-            boxShadow: `none`,
-            color: `inherit`,
-          }}
-          to={`/`}
-        >
-          {title}
-        </Link>
-      </h3>
-    )
-  }
+const Layout = ({ children }) => {
   return (
-    <div
-      style={{
-        marginLeft: `auto`,
-        marginRight: `auto`,
-        maxWidth: rhythm(24),
-        padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-      }}
-    >
-      <header>{header}</header>
-      <main>{children}</main>
-      <footer>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
-      </footer>
-    </div>
+    <StaticQuery
+      query={graphql`
+        query {
+          site {
+            siteMetadata {
+              title
+              tagline
+              description
+            }
+          }
+        }
+      `}
+      render={data => (
+        <div className="container content">
+          <header className="masthead">
+            <h3 className="masthead-title">
+              <Link to='/' title="Home">{ data.site.siteMetadata.title }</Link><br />
+              <small>{ data.site.siteMetadata.tagline }</small>
+            </h3>
+
+          <div className="navigation">
+            <ul id="navigation-list">
+              <li><Link to="/archive/">archive</Link></li>
+              <li><Link to="/tags/">tags</Link></li>
+              <li><Link to="/categories/">categories</Link></li>
+            </ul>
+          </div>
+        </header>
+
+          <main>
+            { children }
+          </main>
+
+          <footer className="footer">
+            <p><a href="https://github.com/essentialenemy/noir/">Noir</a> theme for <a href="https://jekyllrb.com/">Jekyll</a> by <a href="https://essentialenemy.com/">Victor Johnson</a>
+            <br/>
+            <a href="https://github.com/essentialenemy/noir/blob/master/LICENSE.md">Released under MIT License</a></p>
+          </footer>
+        </div>
+      )}
+    />
   )
 }
 
