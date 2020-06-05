@@ -4,7 +4,7 @@ module.exports = {
     tagline: `a vyonizr's blog`,
     author: {
       name: `Fitrahtur Rahman`,
-      summary: `A front end developer.`
+      summary: `A front end developer`
     },
     description: `a vyonizr's blog`,
     siteUrl: `https://vyonizr.github.io`,
@@ -45,7 +45,8 @@ module.exports = {
           },
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
-          `gatsby-remark-smartypants`
+          `gatsby-remark-smartypants`,
+          `gatsby-remark-numbered-footnotes`
         ]
       }
     },
@@ -61,13 +62,12 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Into the Blue Hour`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`
+        icon: `content/assets/vyonizr-web-icon.png`
       }
     },
     `gatsby-plugin-react-helmet`,

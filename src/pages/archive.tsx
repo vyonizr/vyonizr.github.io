@@ -33,7 +33,7 @@ type Data = {
   }
 }
 
-const Archive = ({data }: PageProps<Data>) => {
+const Archive = ({ data }: PageProps<Data>) => {
   const posts = data.allMarkdownRemark.edges
 
   return (

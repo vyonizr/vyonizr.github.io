@@ -5,7 +5,7 @@ date: 2020-06-03 18:46:00 +0700
 tags: [random]
 categories: [Other]
 last_modified_at: 2020-06-03 18:46:00 +0700
-description: null
+description: Jumping on a new platform
 ---
 
 Hello! This is my very first blog post...

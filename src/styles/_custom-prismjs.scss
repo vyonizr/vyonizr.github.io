@@ -1,0 +1,52 @@
+.gatsby-highlight {
+	font-size: 100%;
+}
+
+.gatsby-highlight pre[class*="language-"] {
+  font-size: 14px;
+}
+
+.footnotes ol li {
+  margin-bottom: .75em;
+}
+
+.footnotes ol li p {
+  margin-bottom: 0;
+}
+
+.gatsby-highlight::before {
+  content: attr(data-language);
+  font-family: $code-font-family;
+  position: relative;
+  right: -1em;
+  bottom: -20px;
+
+  font-size: 16px;
+  padding: 0px 7px;
+  text-transform: uppercase;
+  font-weight: bold;
+
+  border: 1px solid $code-light;
+  border-radius: 15px;
+
+  min-width: 30px;
+  text-align: center;
+
+  color: #96CBFE;
+  background-color: $code-bg;
+
+  @media (prefers-color-scheme: dark) {
+    border: 1px solid $code-dark;
+    color: $code-dark;
+  }
+
+  @mixin media-query($device) {
+    @media screen and (max-width: $device) {
+      @content;
+    }
+  }
+
+  @include media-query(300px) {
+      visibility: hidden;
+  }
+}

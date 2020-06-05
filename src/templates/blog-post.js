@@ -10,7 +10,6 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
-  console.log(post, '<== POST');
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -28,7 +27,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           <h1 className="post-title">{ post.frontmatter.title }</h1>
         )
       }
-        <time dateTime={ post.frontmatter.date } className="post-date">{ post.frontmatter.date }
+        <time dateTime={ post.frontmatter.date } className="post-date">{ post.timeToRead } min read &#183; { post.frontmatter.date }
         {
           post.frontmatter.categories && post.frontmatter.categories.map((category, index, categories) => (
             <React.Fragment key={index}>
@@ -45,7 +44,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         {
           post.frontmatter.last_modified_at && (
             <>
-              <br/><i>Last updated on: { post.frontmatter.last_modified_at }</i>
+              <br/><i>Updated: { post.frontmatter.last_modified_at }</i>
             </>
           )
         }
@@ -61,7 +60,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           {
             post.frontmatter.tags && post.frontmatter.tags.map((tag, index, tags) => (
               <React.Fragment key={index}>
-                <Link to={`/categories/#${slugify(tag, {lower: true})}`}>{ tag }</Link>
+                <Link to={`/tags/#${slugify(tag, {lower: true})}`}>#{ tag }</Link>
                 {
                   index < tags.length - 1 && (<>&nbsp;</>)
                 }
@@ -109,6 +108,7 @@ export const pageQuery = graphql`
         link
         tags
       }
+      timeToRead
     }
   }
 `

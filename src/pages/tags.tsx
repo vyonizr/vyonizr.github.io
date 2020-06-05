@@ -40,15 +40,15 @@ const Tags = ({data }: PageProps<Data>) => {
         <h1 className="page-title">Tags</h1>
         <div>
           {
-            tags.map(tag => (
-              <div className="archive-group">
+            tags.map((tag, index) => (
+              <div className="archive-group" key={index}>
                 <div id={'#' + slugify(tag.fieldValue, {lower: true})}></div>
                 <h3 className="tag-head"><small>#{ tag.fieldValue }</small></h3>
 
                 {
-                  tag.edges.map(({node}) => (
-                    <article className="archive-item">
-                      <Link to={node.fields.slug}>{node.frontmatter.title }
+                  tag.edges.map(({node}, index )=> (
+                    <article className="archive-item" key={index}>
+                      <Link to={ node.fields.slug }>{ node.frontmatter.title }
                         {
                           node.frontmatter.link && (
                             <span className="link-arrow"> &rarr;</span>

@@ -82,7 +82,7 @@ If you include any inline `code` it looks awesome.
 
 A code block highlights the [syntax](https://en.wikipedia.org/wiki/Syntax_(programming_languages)) and displays the language:
 
-{% highlight ruby %}
+```ruby
 def test(a=1,b=2,c=a+b)
   puts "#{a},#{b},#{c}"
 end
@@ -90,10 +90,34 @@ test        =>  1,2,3
 test 5      =>  5,2,7
 test 4, 6   =>  4,6,10
 test 3, 4, 6   =>  3,4,6
-{% endhighlight %}
-
- 
+```
 
 ***
 
+Lorem ipsum
+
 [^1]: When a footnote is clicked or tapped on it will be highlighted and outlined Wikipedia-style.
+[^2]: When a footnote is clicked or tapped on it will be highlighted and outlined Wikipedia-style.
+
+```javascript
+function change(string){
+  let result = ""
+  const alphabet = "abcdefghijklmnopqrstuvwxyz"
+
+  for (let i = 0; i < alphabet.length; i++) {
+    const letter = alphabet[i]
+
+    let regex = new RegExp(letter, 'gi')
+    if (regex.test(string)) {
+      result += "1"
+    }
+    else {
+      result += "0"
+    }
+  }
+
+  return result
+}
+
+console.log(change("a ** bz"));
+```

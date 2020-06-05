@@ -40,14 +40,14 @@ const Categories = ({data }: PageProps<Data>) => {
         <h1 className="page-title">Categories</h1>
         <div>
           {
-            categories.map(category => (
-              <div className="archive-group">
+            categories.map((category, index) => (
+              <div className="archive-group" key={index}>
                 <div id={'#' + slugify(category.fieldValue, {lower: true})}></div>
                 <h3 className="tag-head"><small>{ category.fieldValue }</small></h3>
 
                 {
-                  category.edges.map(({node}) => (
-                    <article className="archive-item">
+                  category.edges.map(({node}, index) => (
+                    <article className="archive-item" key={index}>
                       <Link to={node.fields.slug}>{node.frontmatter.title }
                         {
                           node.frontmatter.link && (

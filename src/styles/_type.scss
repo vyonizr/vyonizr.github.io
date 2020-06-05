@@ -191,3 +191,22 @@ a[href^="#fnref:"] {
   font-size: 1.25rem;
   font-weight: 300;
 }
+
+// decresase article margin on Homepage
+article header h3 {
+  margin-bottom: 0;
+}
+
+// fading article information color
+section p.post-description {
+  color: $body-color-fade;
+  margin-bottom: 0;
+}
+
+header > small {
+  color: $body-color-fade;
+}
+
+article.post time {
+  color: $body-color-fade;
+}
