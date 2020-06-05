@@ -4,7 +4,7 @@ title: "First Post"
 date: 2020-06-03 18:46:00 +0700
 tags: [random]
 categories: [Other]
-last_modified_at: 2020-06-05 20:21:00 +0700
+last_modified_at: 2020-06-05 22:21:00 +0700
 description: Jumping on a new platform
 link: (supposed to be a link but I'll leave this here for GraphQL's sake)
 ---
@@ -47,7 +47,7 @@ It is my favorite moment of the day—a peaceful transition into tranquility.
 
   ![Blue hour](./id.pinterest.com.jpg)
 
-  <figcaption>Blue hour (source: <a href="https://wirelesssoul.net/blue-hour-wallpaper-high-definition/">Wireless Soul</a>)</figcaption>
+  <figcaption>Blue hour (source: <a href="https://wirelesssoul.net/blue-hour-wallpaper-high-definition/" target="_blank" rel="noopener noreferrer">Wireless Soul</a>)</figcaption>
 </figure>
 
 See you on the next post! 👋
