@@ -13,7 +13,7 @@ type Data = {
   }
   allMarkdownRemark: {
     edges: {
-      next: {
+      previous: {
         frontmatter: {
           title: string
           date: string
@@ -43,13 +43,13 @@ const Archive = ({ data }: PageProps<Data>) => {
         <h1 className="page-title">Archive</h1>
         <div className="post">
           {
-            posts.map(({ node, next }, index) => (
+            posts.map(({ node, previous }, index) => (
               <React.Fragment key={index}>
                 {
-                  !next ? (
+                  !previous ? (
                     <h3><small>{ node.frontmatter.date }</small></h3>
                   ) : (
-                    node.frontmatter.date !== next.frontmatter.date && (
+                    node.frontmatter.date.split(' ').reverse().join(' ') !== previous.frontmatter.date.split(' ').reverse().join(' ') && (
                       <h3><small>{ node.frontmatter.date }</small></h3>
                     )
                   )
@@ -80,9 +80,9 @@ export const archiveQuery = graphql`
         title
       }
     }
-    allMarkdownRemark {
+    allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}) {
       edges {
-        next {
+        previous {
           frontmatter {
             title
             date(formatString: "MMMM Y")
