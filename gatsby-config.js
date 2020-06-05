@@ -46,7 +46,14 @@ module.exports = {
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
-          `gatsby-remark-numbered-footnotes`
+          `gatsby-remark-numbered-footnotes`,
+          `gatsby-plugin-catch-links`,
+          {
+            resolve: "gatsby-remark-external-links",
+            options: {
+              rel: "noopener noreferrer"
+            }
+          }
         ]
       }
     },
