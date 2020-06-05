@@ -35,8 +35,11 @@ pre[class*="language-"] {
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-  background-color: #e0e0e0;
+  background-color: #24252b;
   color: $code-light;
+  border: 1px solid $code-light;
+  border-radius: 15px;
+  box-shadow: 0 4px 30px rgba(0,0,0,.4);
 
   @media (prefers-color-scheme: dark) {
     background-color: #212c2d;
@@ -45,9 +48,21 @@ pre[class*="language-"] {
 }
 
 /* Inline code */
-:not(pre) > code[class*="language-"] {
+:not(pre) > code.language-text {
 	padding: .1em;
 	border-radius: .3em;
+  background-color: #e0e0e0;
+  color: #54a3fc;
+  box-shadow: none;
+  border: none;
+  border-radius: 3px;
+  font-size: .8em;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: #212c2d;
+    color: $code-dark;
+  }
+
 }
 
 .token.comment,
