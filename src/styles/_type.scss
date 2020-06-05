@@ -201,12 +201,24 @@ article header h3 {
 section p.post-description {
   color: $body-color-fade;
   margin-bottom: 0;
+
+  @media (prefers-color-scheme: dark) {
+    color: $body-color-dark-fade;
+  }
 }
 
 header > small {
   color: $body-color-fade;
+
+  @media (prefers-color-scheme: dark) {
+    color: $body-color-dark-fade;
+  }
 }
 
 article.post time {
   color: $body-color-fade;
+
+  @media (prefers-color-scheme: dark) {
+    color: $body-color-dark-fade;
+  }
 }
