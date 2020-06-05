@@ -4,7 +4,7 @@ title: "First Post"
 date: 2020-06-03 18:46:00 +0700
 tags: [random]
 categories: [Other]
-last_modified_at: 2020-06-04 20:21:00 +0700
+last_modified_at: 2020-06-05 20:21:00 +0700
 description: Jumping on a new platform
 link: (supposed to be a link but I'll leave this here for GraphQL's sake)
 ---
