@@ -4,7 +4,6 @@ import { PageProps, Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { localTime } from "../helpers"
 
 type Data = {
   site: {
@@ -63,7 +62,7 @@ const BlogIndex = ({ data }: PageProps<Data>) => {
                   </section>
                 )
               }
-              <small>{localTime(node.frontmatter.date)} &#183; {node.timeToRead} min read</small>
+              <small>{ node.frontmatter.date } &#183; {node.timeToRead} min read</small>
             </header>
           </article>
         )
@@ -89,7 +88,7 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            date
+            date(formatString: "MMMM DD, YYYY")
             title
             description
             link

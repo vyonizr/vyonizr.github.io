@@ -5,7 +5,6 @@ import slugify from 'slugify'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import "../styles/styles.scss"
-import localTime from "../helpers/localTime"
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
@@ -29,7 +28,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           <h1 className="post-title">{ post.frontmatter.title }</h1>
         )
       }
-        <time dateTime={ localTime(post.frontmatter.date, 'MMMM Do, YYYY') } className="post-date">{ post.timeToRead } min read &#183; { localTime(post.frontmatter.date, 'MMMM Do, YYYY') }
+        <time dateTime={ post.frontmatter.date } className="post-date">{ post.timeToRead } min read &#183; { post.frontmatter.date }
         {
           post.frontmatter.categories && post.frontmatter.categories.map((category, index, categories) => (
             <React.Fragment key={index}>
@@ -46,7 +45,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         {
           post.frontmatter.last_modified_at && (
             <>
-              <br/><i>Updated: { localTime(post.frontmatter.last_modified_at, 'MMMM Do, YYYY') }</i>
+              <br/><i>Updated: { post.frontmatter.last_modified_at }</i>
             </>
           )
         }
@@ -103,8 +102,8 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date
-        last_modified_at
+        date(formatString: "MMMM Do, YYYY")
+        last_modified_at(formatString: "MMMM Do, YYYY")
         categories
         description
         link
