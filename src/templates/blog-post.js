@@ -17,6 +17,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
+        image={post.frontmatter.image}
       />
       <article className="post">
       {
@@ -108,6 +109,9 @@ export const pageQuery = graphql`
         description
         link
         tags
+        image {
+          publicURL
+        }
       }
       timeToRead
     }
