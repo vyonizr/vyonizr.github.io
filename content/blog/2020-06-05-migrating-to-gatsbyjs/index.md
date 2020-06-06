@@ -21,19 +21,19 @@ It has been only two days ago since I [released this platform on Jekyll](/2020-0
 
 Yes,
 
-I said that I am more concern about the content. But, after reading some references, someone said that Jekyll builds slower when it comes to loads of pages.[^1]
+I said that I am more concerned about the content. But, after reading some references, someone said that Jekyll builds slower when it comes to loads of pages.[^1]
 
-I want my blog to be futureproof. I remember my colleague [Adib Firman](https://adibfirman.github.io/) once said he built his blog with GatsbyJS. Then I realized one of the advantages of using it—easier to navigate between pages because its `Link` component won't trigger a full page refresh.
+I want my blog to futureproof. I remember my colleague [Adib Firman](https://adibfirman.github.io/) once said he built his blog with GatsbyJS. Then I realized one of the advantages of using it—easier to navigate between pages because its `Link` component won't trigger a full page refresh.
 
 ## Migrating 📦
 
 I love the minimalism of Jekyll's Noir theme and I want to bring it together. Converting Shopify's [Liquid](https://shopify.github.io/liquid/) into React was challenging. I kept the SASS files instead of installing `styled-components` like I usually do to save time. Then there came a little issue.
 
-Jekyll and GatsbyJS have different parser. It is a different world. Jekyll uses [Kramdown](https://kramdown.gettalong.org/) while Gatsby uses [remark](https://remark.js.org/). There is significant difference on how it parses syntax highlighting as they have different classes names and attributes. So, I did a workaround using `gatsby-remark-prismjs`. Some required custom styling to replicate Noir as close as possible.
+Jekyll and GatsbyJS have different parsers. It is a different world. Jekyll uses [Kramdown](https://kramdown.gettalong.org/) while Gatsby uses [remark](https://remark.js.org/). There is a significant difference on how it parses syntax highlighting as they have different class names and attributes. So, I did a workaround using `gatsby-remark-prismjs`. Some required custom styling to replicate Noir as close as possible.
 
-During the development, I learned cool stuffs:
+During the development, I learned cool stuff:
 
-1. I used GraphQL once ond a project, but not as deep as this one. I wish this can be a new API standard some time in the future.
+1. I used GraphQL once on a project, but not as deep as this one. I wish this can be a new API standard sometime in the future.
 2. I got my hands dirty on SASS even if it's only for variables and imports. The rest was just like regular CSS.
 3. They are right about GatsbyJS plugins. I've never thought it would be very helpful. I used to take it for granted.
 4. `gatsby-plugin-catch-links` is your friend when you want to navigate to local links
