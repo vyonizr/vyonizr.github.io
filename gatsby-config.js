@@ -7,6 +7,7 @@ module.exports = {
       summary: `A front end developer`
     },
     description: `a vyonizr's blog`,
+    keywords: ['programming', 'web'],
     siteUrl: `https://vyonizr.github.io`,
     social: {
       twitter: `vyonizr`
@@ -69,6 +70,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Into the Blue Hour`,
+        short_name: `vyonizr's Blog`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#0366d6`,
