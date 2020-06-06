@@ -28,7 +28,7 @@ I want my blog to be futureproof. I remember my colleague [Adib Firman](https://
 
 I love the minimalism of Jekyll's Noir theme and I want to bring it together. Converting Shopify's [Liquid](https://shopify.github.io/liquid/) into React was challenging. I kept the SASS files instead of installing `styled-components` like I usually do to save time. Then there came a little issue.
 
-Jekyll and GatsbyJS has different parser. It is a different world. Jekyll uses [Kramdown](https://kramdown.gettalong.org/) while Gatsby uses [remark](https://remark.js.org/). There was significant difference on how it parsed syntax highlighting as they have different classes names and attributes. So, I did a workaround using `gatsby-remark-prismjs`. Some required custom styling to replicate Noir as close as possible.
+Jekyll and GatsbyJS have different parser. It is a different world. Jekyll uses [Kramdown](https://kramdown.gettalong.org/) while Gatsby uses [remark](https://remark.js.org/). There is significant difference on how it parses syntax highlighting as they have different classes names and attributes. So, I did a workaround using `gatsby-remark-prismjs`. Some required custom styling to replicate Noir as close as possible.
 
 During the development, I learned cool stuffs:
 
