@@ -65,15 +65,14 @@ module.exports = {
         trackingId: `UA-168548737-1`,
       }
     },
-    `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Into the Blue Hour`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
+        theme_color: `#0366d6`,
+        display: `standalone`,
         icon: `content/assets/vyonizr-web-icon.png`
       }
     },
