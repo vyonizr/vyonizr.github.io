@@ -37,9 +37,13 @@ const Layout = ({ children }) => {
           </main>
 
           <footer className="footer">
-            <p><a href="https://github.com/essentialenemy/noir/">Noir</a> theme for <a href="https://jekyllrb.com/">Jekyll</a> by <a href="https://essentialenemy.com/">Victor Johnson</a>
-            <br/>
-            <a href="https://github.com/essentialenemy/noir/blob/master/LICENSE.md">Released under MIT License</a></p>
+            <p>
+              © {new Date().getFullYear()} <a href="https://vyonizr.com/" class="no-decoration" target="_blank" rel="noopener noreferrer">vyonizr</a>
+              <br/>
+              <a href="https://github.com/essentialenemy/noir/">Noir</a> theme for <a href="https://jekyllrb.com/">Jekyll</a> by <a href="https://essentialenemy.com/">Victor Johnson</a>
+              <br/>
+              <a href="https://github.com/essentialenemy/noir/blob/master/LICENSE.md">Released under MIT License</a>
+            </p>
           </footer>
         </div>
       )}
