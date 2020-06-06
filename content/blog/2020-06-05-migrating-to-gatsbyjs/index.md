@@ -7,6 +7,7 @@ categories: [Programming]
 last_modified_at: null
 description: I'm sorry Jekyll
 link: null
+image: ./gatsby-vs-jekyll.jpg
 ---
 
 <figure>

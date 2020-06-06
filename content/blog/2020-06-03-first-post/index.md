@@ -7,6 +7,7 @@ categories: [Other]
 last_modified_at: 2020-06-05 22:21:00 +0700
 description: Jumping on a new platform
 link: (supposed to be a link but I'll leave this here for GraphQL's sake)
+image: ./id.pinterest.com.jpg
 ---
 
 Hello! This is my very first blog post...
