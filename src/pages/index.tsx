@@ -4,7 +4,7 @@ import { PageProps, Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import localTime from "../helpers/localTime"
+import { localTime } from "../helpers"
 
 type Data = {
   site: {
@@ -31,8 +31,7 @@ type Data = {
   }
 }
 
-const BlogIndex = ({ data, location }: PageProps<Data>) => {
-  const siteTitle = data.site.siteMetadata.title
+const BlogIndex = ({ data }: PageProps<Data>) => {
   const posts = data.allMarkdownRemark.edges
 
   return (
