@@ -36,6 +36,10 @@ type Data = {
 const Archive = ({ data }: PageProps<Data>) => {
   const posts = data.allMarkdownRemark.edges
 
+  const swapToMonthYear = (YearMonth: String) => {
+    return YearMonth.split(' ').reverse().join(' ')
+  }
+
   return (
     <Layout>
       <SEO title="Archive" />
@@ -49,7 +53,7 @@ const Archive = ({ data }: PageProps<Data>) => {
                   !previous ? (
                     <h3><small>{ node.frontmatter.date }</small></h3>
                   ) : (
-                    node.frontmatter.date.split(' ').reverse().join(' ') !== previous.frontmatter.date.split(' ').reverse().join(' ') && (
+                    swapToMonthYear(node.frontmatter.date) !== swapToMonthYear(previous.frontmatter.date) && (
                       <h3><small>{ node.frontmatter.date }</small></h3>
                     )
                   )
