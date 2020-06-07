@@ -72,7 +72,7 @@ export default Tags
 
 export const tagsQuery = graphql`
   query {
-    tagsGroup: allMarkdownRemark(limit: 2000) {
+    tagsGroup: allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, limit: 2000) {
       group(field: frontmatter___tags) {
         fieldValue
         edges {

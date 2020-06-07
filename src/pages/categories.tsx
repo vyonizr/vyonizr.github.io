@@ -72,7 +72,7 @@ export default Categories
 
 export const archiveQuery = graphql`
   query {
-    categoriesGroup: allMarkdownRemark(limit: 2000) {
+    categoriesGroup: allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, limit: 2000) {
       group(field: frontmatter___categories) {
         fieldValue
         edges {
