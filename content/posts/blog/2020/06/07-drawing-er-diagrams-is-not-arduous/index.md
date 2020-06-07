@@ -6,8 +6,15 @@ categories: [Programming]
 last_modified_at: null
 description: How a simple tool brought me a new perspective
 link: null
-image: ./book-rent-diagram.png
+image: ./sophie-vinetlouis--r5D5VB13j4-unsplash.jpg
 ---
+
+<figure>
+
+  ![Photo by Sophie Vinetlouis on Unsplash](./sophie-vinetlouis--r5D5VB13j4-unsplash.jpg)
+
+  <figcaption>Photo by <a href="https://unsplash.com/@vinetlouispictures" target="_blank" rel="noopener noreferrer">Sophie Vinetlouis</a> on <a href="https://unsplash.com/" target="_blank" rel="noopener noreferrer">Unsplash</a></figcaption>
+</figure>
 
 Have you ever been struggling to make entity relationship (ER) diagrams, when you put your time more on the cosmetics rather than developing it? We were on the same page. Then one day, I found a tool that changed the game.
 
@@ -19,7 +26,7 @@ Have you ever been struggling to make entity relationship (ER) diagrams, when yo
 
   ![How dbdiagram.io works](./dbdiagram-demo.0791273.gif)
 
-  <figcaption>How dbdiagram.io works (source: <a href="https://dbdiagram.io/home target="_blank" rel="noopener noreferrer">dbdiagram.io</a>)</figcaption>
+  <figcaption>How dbdiagram.io works (source: <a href="https://dbdiagram.io/home" target="_blank" rel="noopener noreferrer">dbdiagram.io</a>)</figcaption>
 </figure>
 
 This tool comes with a free tier. It has already provided essential elements such as save, share, export to SQL, and import. There's also "dark mode" for those who love the dimmed screen.
