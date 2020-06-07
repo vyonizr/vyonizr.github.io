@@ -1,6 +1,5 @@
 ---
 title: "Migrating to GatsbyJS"
-published: true
 date: 2020-06-06 00:38:00 +0700
 tags: [jekyll, gatsbyjs]
 categories: [Programming]
