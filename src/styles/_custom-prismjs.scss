@@ -50,3 +50,9 @@
       visibility: hidden;
   }
 }
+
+.gatsby-highlight[data-language*="javascript"]::before {
+  color: $body-color;
+  background-color: $lang-javascript-bg;
+  border: none;
+}
