@@ -1,7 +1,7 @@
 ---
-layout: post
 title: "My VS Code Visual Setup"
 date: 2020-06-06 08:49:00 +0700
+published: true
 tags: [vscode]
 categories: [Programming]
 last_modified_at: null

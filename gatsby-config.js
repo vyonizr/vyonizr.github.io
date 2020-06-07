@@ -7,7 +7,7 @@ module.exports = {
       summary: `A front end developer`
     },
     description: `a vyonizr's blog`,
-    keywords: ['programming', 'web'],
+    keywords: ['programming', 'web', 'blog'],
     siteUrl: `https://vyonizr.github.io`,
     social: {
       twitter: `vyonizr`
@@ -17,7 +17,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/blog`,
+        path: `${__dirname}/content/posts`,
         name: `blog`
       }
     },

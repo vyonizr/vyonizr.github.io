@@ -1,6 +1,6 @@
 ---
-layout: post
 title: "First Post"
+published: true
 date: 2020-06-03 18:46:00 +0700
 tags: [random]
 categories: [Other]
