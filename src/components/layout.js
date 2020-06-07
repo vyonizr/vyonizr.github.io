@@ -38,7 +38,7 @@ const Layout = ({ children }) => {
 
           <footer className="footer">
             <p>
-              © {new Date().getFullYear()} <a href="https://vyonizr.com/" class="no-decoration" target="_blank" rel="noopener noreferrer">vyonizr</a>
+              © {new Date().getFullYear()} <a href="https://vyonizr.com/" className="no-decoration" target="_blank" rel="noopener noreferrer">vyonizr</a>
               <br/>
               <a href="https://github.com/essentialenemy/noir/">Noir</a> theme for <a href="https://jekyllrb.com/">Jekyll</a> by <a href="https://essentialenemy.com/">Victor Johnson</a>
               <br/>
