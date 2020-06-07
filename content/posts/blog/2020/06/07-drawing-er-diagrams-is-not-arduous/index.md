@@ -24,7 +24,10 @@ Have you ever been struggling to make entity relationship (ER) diagrams, when yo
 
 <figure>
 
-  ![How dbdiagram.io works](./dbdiagram-demo.0791273.gif)
+  <video autoplay loop muted playsinline>
+    <source src="dbdiagram-demo.0791273.webm" type="video/webm">
+    <source src="dbdiagram-demo.0791273.mp4" type="video/mp4">
+  </video>
 
   <figcaption>How dbdiagram.io works (source: <a href="https://dbdiagram.io/home" target="_blank" rel="noopener noreferrer">dbdiagram.io</a>)</figcaption>
 </figure>
