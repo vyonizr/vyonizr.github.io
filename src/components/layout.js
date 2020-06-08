@@ -28,6 +28,7 @@ const Layout = ({ children }) => {
               <li><Link to="/archive/">archive</Link></li>
               <li><Link to="/tags/">tags</Link></li>
               <li><Link to="/categories/">categories</Link></li>
+              <li><Link to="/about/">about</Link></li>
             </ul>
           </div>
         </header>
