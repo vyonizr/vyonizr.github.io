@@ -56,3 +56,9 @@
   background-color: $lang-javascript-bg;
   border: none;
 }
+
+.gatsby-highlight[data-language*="sql"]::before, .gatsby-highlight[data-language*="dbml"]::before {
+  color: white;
+  background-color: $lang-sql-bg;
+  border: none;
+}
