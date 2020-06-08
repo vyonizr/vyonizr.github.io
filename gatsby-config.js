@@ -4,13 +4,14 @@ module.exports = {
     tagline: `a vyonizr's blog`,
     author: {
       name: `Fitrahtur Rahman`,
-      summary: `A front end developer`
+      summary: `I am a sailor in the ocean of knowledge—cruising on lifelong learning to create meaningful legacies. ⛵️`
     },
     description: `a vyonizr's blog`,
     keywords: ['programming', 'web', 'blog'],
     siteUrl: `https://vyonizr.github.io`,
     social: {
-      twitter: `vyonizr`
+      twitter: `vyonizr`,
+      website: `https://vyonizr.com/`
     }
   },
   plugins: [
