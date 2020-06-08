@@ -66,6 +66,10 @@ img, video {
   border-radius: 5px;
 }
 
+figure > video {
+  margin: 0 auto;
+}
+
 table {
   margin-bottom: 1rem;
   width: 100%;
