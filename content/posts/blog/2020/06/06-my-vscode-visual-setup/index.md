@@ -3,7 +3,7 @@ title: "My VS Code Visual Setup"
 date: 2020-06-06 08:49:00 +0700
 tags: [vscode]
 categories: [Programming]
-last_modified_at: null
+last_modified_at: 2020-06-08 06:54:00 +0700
 description: Eye-comforting interface speeds up development
 link: null
 image: ./debby-hudson-MzSqFPLo8CE-unsplash.jpg
@@ -44,9 +44,12 @@ indent-rainbow gives the indentation four different colors on each step, depends
 
 <figure>
 
-  ![Indented Block Highlighting](./indented-block-highlighting.gif)
+  <video autoplay loop muted playsinline>
+    <source src="indented-block-highlighting.webm" type="video/webm">
+    <source src="indented-block-highlighting.mp4" type="video/mp4">
+  </video>
 
-  <figcaption>Indented Block Highlighting (source: <a href="https://marketplace.visualstudio.com/items?itemName=byi8220.indented-block-highlighting" target="_blank" rel="noopener noreferrer">Visual Studio Marketplace</a>)</figcaption>
+  <figcaption>Indented Block Highlighting demo (source: <a href="https://marketplace.visualstudio.com/items?itemName=byi8220.indented-block-highlighting" target="_blank" rel="noopener noreferrer">Visual Studio Marketplace</a>)</figcaption>
 </figure>
 
 I use this as a support for bracket colorizer. It highlights the area where the cursor is. Install [here](https://marketplace.visualstudio.com/items?itemName=byi8220.indented-block-highlighting).
