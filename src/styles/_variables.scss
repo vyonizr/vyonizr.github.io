@@ -5,7 +5,7 @@ $dark: #54a3fc;
 
 // Highlighting color for code block borders and language name.
 
-$code-light: #54a3fc;
+$code-light: #185abc;
 $code-dark: #54a3fc;
 
 $message-green: #62bb47;
@@ -30,6 +30,10 @@ $body-bg-dark: rgba(0,0,0,.9);
 $large-breakpoint: 38em;
 $large-font-size: 20px;
 
+$lang-jsx-color: #61dafb;
+
 $lang-javascript-bg: #f1e05a;
 $lang-shell-bg: #89e051;
 $lang-sql-bg: #31648c;
+$lang-jsx-bg: #20232a;
+$lang-css-bg: #264de4;
