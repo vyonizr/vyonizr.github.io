@@ -16,7 +16,7 @@ image: ./gatsby-vs-jekyll.jpg
   <figcaption>GatsbyJS vs Jekyll (source: <a href="https://medium.com/@ajkueterman/quick-thoughts-on-gatsby-js-vs-jekyll-c13c1337c24a" target="_blank" rel="noopener noreferrer">Medium</a>)</figcaption>
 </figure>
 
-It has been only two days ago since I [released this platform on Jekyll](/2020-06-03-first-post/).
+It has been only two days ago since I [released this platform on Jekyll](/blog/2020/06/03-first-post/).
 
 Yes,
 
