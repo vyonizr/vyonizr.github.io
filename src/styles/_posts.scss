@@ -5,10 +5,10 @@ figure {
     margin-left:    0;
     margin-top:     1.5em;
     margin-bottom:  2em;
-    
+
     & > :nth-last-child(2) {
         margin-bottom: 0;
-        
+
         & > :last-child {
             margin-bottom: 0;
         }
@@ -23,7 +23,7 @@ figure {
         margin-left:    0;
         margin-right:   0;
         margin-top:     0;
-        
+
         figcaption {
             margin-top:     -1em;
             margin-right:   2em;
@@ -33,11 +33,11 @@ figure {
     &.attributed-quote {
         margin-left:    0;
         margin-right:   0;
-        
+
         figcaption {
             margin-top:     0.8em;
             margin-left:    4em;
-            
+
             p {
                 display: inline;
             }
@@ -77,7 +77,7 @@ figure {
 .post-title,
 .post-title a {
   color: $body-color;
-  
+
 @media (prefers-color-scheme: dark) {
   color: $body-color-dark;
   }
@@ -94,7 +94,7 @@ figure {
   margin-top: -.5rem;
   margin-bottom: 1rem;
   color: $body-color;
-  
+
 @media (prefers-color-scheme: dark) {
   color: $body-color-dark;
   }
@@ -106,7 +106,7 @@ figure {
   margin-top: -.9rem;
   margin-bottom: 1.5rem;
   color: $body-color;
-  
+
 @media (prefers-color-scheme: dark) {
   color: $body-color-dark;
   }
@@ -131,7 +131,7 @@ figure {
   padding-right: 8px;
   border-radius: 5px;
   color: $body-color;
-  
+
   @media (prefers-color-scheme: dark) {
 	color: $code-dark;
 	}
@@ -144,7 +144,7 @@ figure {
   margin-bottom: 2rem;
   border-top: 1px solid #d4d4d4;
   border-bottom: 1px solid #d4d4d4;
-  
+
 @media (prefers-color-scheme: dark) {
   border-top: 1px solid #333333;
   border-bottom: 1px solid #333333;
@@ -188,7 +188,7 @@ figure {
     a:hover {
       color: $light;
       text-decoration: none;
-	 
+
     @media (prefers-color-scheme: dark) {
 	  color: $dark;
       }
@@ -198,4 +198,8 @@ figure {
 	    }
     }
   }
+}
+
+sup {
+  line-height: 0;
 }
