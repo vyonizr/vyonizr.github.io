@@ -1,5 +1,6 @@
 .gatsby-highlight {
 	font-size: 100%;
+  margin-bottom: 2rem;
 }
 
 .gatsby-highlight pre[class*="language-"] {
@@ -60,5 +61,17 @@
 .gatsby-highlight[data-language*="sql"]::before, .gatsby-highlight[data-language*="dbml"]::before {
   color: white;
   background-color: $lang-sql-bg;
+  border: none;
+}
+
+.gatsby-highlight[data-language*="jsx"]::before {
+  color: $lang-jsx-color;
+  background-color: $lang-jsx-bg;
+  border: none;
+}
+
+.gatsby-highlight[data-language*="css"]::before {
+  color: white;
+  background-color: $lang-css-bg;
   border: none;
 }
