@@ -1,7 +1,4 @@
-import localTime from './localTime'
-import readTime from './readTime'
+import localTime from "./localTime"
+import readTime from "./readTime"
 
-export {
-  localTime,
-  readTime
-}
+export { localTime, readTime }

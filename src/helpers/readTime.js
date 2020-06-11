@@ -1,4 +1,4 @@
-const readTime = (minute) => {
+const readTime = minute => {
   return `${minute} min read`
 }
 

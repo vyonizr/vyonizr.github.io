@@ -1,6 +1,6 @@
-import moment from 'moment'
+import moment from "moment"
 
-const localTime = (date, dateFormat = 'MMMM DD, YYYY') => {
+const localTime = (date, dateFormat = "MMMM DD, YYYY") => {
   return moment(date).local().format(dateFormat)
 }
 
