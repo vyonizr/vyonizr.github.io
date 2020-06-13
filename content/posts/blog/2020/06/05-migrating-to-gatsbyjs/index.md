@@ -11,7 +11,7 @@ image: ./gatsby-vs-jekyll.jpg
 
 <figure>
 
-  ![GatsbyJS vs Jekyll](./gatsby-vs-jekyll.jpg)
+![GatsbyJS vs Jekyll](./gatsby-vs-jekyll.jpg)
 
   <figcaption>GatsbyJS vs Jekyll (source: <a href="https://medium.com/@ajkueterman/quick-thoughts-on-gatsby-js-vs-jekyll-c13c1337c24a" target="_blank" rel="noopener noreferrer">Medium</a>)</figcaption>
 </figure>
@@ -40,5 +40,5 @@ During the development, I learned cool stuff:
 
 Nevertheless, I keep my Jekyll as a memento on [a branch](https://github.com/vyonizr/vyonizr.github.io/tree/deprecated-jekyll). Time to celebrate one more time, I guess? 🥳
 
-[^1]: Slant, ***Jekyll - What are the best solutions for a personal blog?*** \[website\], https://www.slant.co/topics/329/viewpoints/4/~best-solutions-for-a-personal-blog~jekyll, (accessed June 4 2020)
-[^2]: web.dev, ***Links to cross-origin destinations are unsafe*** \[website\], https://web.dev/external-anchors-use-rel-noopener/, (accessed June 5 2020)
+[^1]: Slant, **_Jekyll - What are the best solutions for a personal blog?_** \[website\], https://www.slant.co/topics/329/viewpoints/4/~best-solutions-for-a-personal-blog~jekyll, (accessed June 4 2020)
+[^2]: web.dev, **_Links to cross-origin destinations are unsafe_** \[website\], https://web.dev/external-anchors-use-rel-noopener/, (accessed June 5 2020)

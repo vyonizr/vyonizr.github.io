@@ -63,7 +63,9 @@ Suppose that we want to make a list of a thousand artists around the world. Cons
 import React from "react"
 import { FixedSizeList } from "react-window"
 
-const artists = [ /* your data */ ]
+const artists = [
+  /* your data */
+]
 
 const App = () => {
   const Row = ({ index, style }) => <div style={style}>{artists[index]}</div>
@@ -122,7 +124,7 @@ const artists = [
 const App = () => {
   const Row = ({ index, style }) => (
     <div style={style}>{artists[index].name}</div>
-  );
+  )
 
   return (
     <VariableSizeList
@@ -149,7 +151,9 @@ import React from "react"
 import { FixedSizeList } from "react-window"
 import AutoSizer from "react-virtualized-auto-sizer"
 
-const artists = [ /* your data */ ]
+const artists = [
+  /* your data */
+]
 
 const App = () => {
   const Row = ({ index, style }) => <div style={style}>{artists[index]}</div>
@@ -193,7 +197,7 @@ export default App
   <figcaption>Behind the scene of react-window (source: <a href="https://web.dev/virtualize-long-lists-react-window/">web.dev</a>)</figcaption>
 </figure>
 
-`react-window` implements a similar technique on 3D computer graphics called *Occlusion Culling* that reveals objects only visible to the user and avoids unnecessary render[^3]. It has a container as tall as the sum of entire rows' height. Each row is `absolute`-ly positioned (pun intended) and its `top` property is responsible for conditional rendering. There's also *Frustum Culling*, a less strict one. However, both are important to keep user experience frictionless. Have a look at *Horizon Zero Dawn* below.
+`react-window` implements a similar technique on 3D computer graphics called _Occlusion Culling_ that reveals objects only visible to the user and avoids unnecessary render[^3]. It has a container as tall as the sum of entire rows' height. Each row is `absolute`-ly positioned (pun intended) and its `top` property is responsible for conditional rendering. There's also _Frustum Culling_, a less strict one. However, both are important to keep user experience frictionless. Have a look at _Horizon Zero Dawn_ below.
 
 <figure>
 
