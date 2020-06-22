@@ -76,3 +76,21 @@
   background-color: $lang-css-bg;
   border: none;
 }
+
+.gatsby-highlight[data-language*="bash"]::before {
+  color: $lang-bash-color;
+  background-color: $lang-bash-bg;
+  border: none;
+}
+
+.gatsby-highlight[data-language*="python"]::before {
+  color: $lang-python-color;
+  background-color: $lang-python-bg;
+  border: none;
+}
+
+.gatsby-highlight[data-language*="html"]::before {
+  color: white;
+  background-color: $lang-html-bg;
+  border: none;
+}
