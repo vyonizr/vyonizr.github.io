@@ -11,7 +11,7 @@ image: ./caitlin-oriel--swfFFgnF6Y-unsplash.jpg
 
 <figure>
 
-![Bracket Pair Colorizer](./caitlin-oriel--swfFFgnF6Y-unsplash.jpg)
+![Photo by Caitlin Oriel on Unsplash](./caitlin-oriel--swfFFgnF6Y-unsplash.jpg)
 
   <figcaption>Photo by <a href="https://unsplash.com/@coriel" target="_blank" rel="noopener noreferrer">Caitlin Oriel</a> on <a href="https://unsplash.com/" target="_blank" rel="noopener noreferrer">Unsplash</a></figcaption>
 </figure>
