@@ -1,24 +1,31 @@
 ---
-title: "Build Cat Facts Generator with Flask"
-date: 2020-06-22 22:06:00 +0700
-tags: [python, flask]
+title: "Build Cat Facts App With Flask"
+date: 2020-06-23 10:18:00 +0700
+tags: [python, flask, heroku]
 categories: [Programming]
 last_modified_at: null
-description: And automatically deploy it to Heroku
-image: null
+description: And how to deploy it to Heroku
+image: ./python-web-stack.png
 ---
 
-This post guides you through Flask, a micro web framework in Python. We may not hear it often among the rise of JAMstack, but big companies like Netflix and LinkedIn use it for their business[^1]. It is modular, minimalist, and provides detailed documentation. It is also covers both stacks: back-end and front-end with the support from secure Jinja2 templating engine[^2]. So I wanted to give it a try by building a simple app to generate cat facts.
+<figure>
+
+![Python web stack](./python-web-stack.png)
+
+  <figcaption>Python web stack</figcaption>
+</figure>
+
+This post guides you through creating a web app with Flask, a micro web framework in Python. We may not hear it often among the rise of JAMstack, but big companies like Netflix and LinkedIn use it for their business[^1]. It is modular, minimalist, and provides detailed documentation. It also covers both stacks: back-end and front-end with support from secure Jinja templating engine[^2]. So I wanted to give it a try by building a simple app to generate cat facts.
 
 ### Prerequisites
 
-Before we begin, it is recommended to have Python `3.5` or higher installed. Mine is `3.6.9` in this time of writing. It conveniently comes with `pip` package installer and `venv` module to create virtual environments. Basic git knowledge is also needed for creating Github repository.
+Before we begin, make sure you have [git](https://git-scm.com/) and Python `3.5` or higher installed. Mine is `3.6.9` in this time of writing. Why? Because it conveniently comes with `pip` package installer and `venv` module to create virtual environments.
 
 ## Installation
 
 ### Setting up virtual environment (venv)
 
-In Python, it comes in handy if you have an isolated environment for different projects. Every project is using different packages and if you install it globally, your `requirements.txt` aka your "dependency list" will be bloated with unnecessary packages when shared with other collaborators.
+In Python, it comes in handy if you have an isolated environment for different projects. Every project uses different packages and if you install it globally, your `requirements.txt` aka your "dependency list" will be bloated with unnecessary packages when shared with other collaborators.
 
 1. `Flask` is the framework we are going to build our app upon
 2. `flask-cors` to enable Cross-Origin Resource Sharing (CORS) in our app
@@ -42,7 +49,7 @@ pip install Flask flask-cors requests gunicorn
 pip freeze | grep -v "pkg-resources" > requirements.txt
 ```
 
-I did not include `pkg-resources` because it is a bug caused by incorrect metadata given by Ubuntu to `pip`[^3] and it would break our build on deployment. If you are on other operating system, use `pip freeze > requirements.txt` instead. By the end of the guide, your project directory would look like this:
+I did not include `pkg-resources` because it is a bug caused by incorrect metadata given by Ubuntu to `pip`[^3] and it would break our build on deployment. If you are on other operating systems, use `pip freeze > requirements.txt` instead. By the end of the guide, your project directory would look like this:
 
 ```text
 /flask-cat-facts/
@@ -58,11 +65,10 @@ I did not include `pkg-resources` because it is a bug caused by incorrect metada
 ├── venv/
 ├── .gitignore
 ├── Procfile
-├── README.md
 └── requirements.txt
 ```
 
-Download cat icon [here](https://icons8.com/icon/tgLepcPbp6mP/cat) and place it inside `images` directory. Next, Create a `.gitignore` file to exclude these files and directories:
+Download the cat icon [here](https://icons8.com/icon/tgLepcPbp6mP/cat) and place it inside `images` folder. Next, Create a `.gitignore` file to exclude these files and directories:
 
 ```text
 # in our .gitignore
@@ -112,7 +118,7 @@ def main():
 
 ### Creating layout
 
-We are going to create more than one page and they have some parts in common. Rather than repeating the code, we can create a layout. Jinja is able to inherit reusable HTML codes.
+We are going to create more than one page and they have some parts in common. Rather than repeating the code, we can create a layout. Jinja is able to inherit reusable HTML page inside `templates` folder on your project.
 
 ```html
 <!-- /flask-cat-facts/templates/layout.html -->
@@ -148,7 +154,7 @@ We are going to create more than one page and they have some parts in common. Ra
 <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/icons8-cat-50.png') }}">
 ```
 
-As you can see, the syntax above is bit strange. But don't worry, because it is part of Jinja's work. It creates a path called `static` and set the file path on `filename` relative to `flaskr/static`[^5]. Importing CSS can be done in a similar fashion:
+As you can see, the syntax above is a bit strange. But don't worry, because it is part of Jinja's work. It creates a path called `static` and set the file path on `filename` relative to `flaskr/static`[^4]. Importing CSS can be done in a similar fashion:
 
 ```html
 <link rel="stylesheet" href="{{ url_for('static', filename='styles/global.css') }}">
@@ -186,14 +192,14 @@ flask run
 
 <figure>
 
-![Run Flask server](./flask_run.png)
+![Flask server is successfully running](./flask_run.png)
 
-  <figcaption>our index.html</figcaption>
+  <figcaption>Our Flask server is successfully running</figcaption>
 </figure>
 
 ### Displaying cat facts
 
-The next thing is how we display the cat facts. There's an API by [alexwohlbruck](https://github.com/alexwohlbruck/cat-facts) to fetch from, so we don't have to build from scratch. Provide a new route in your server:
+The next thing is how we display the cat facts. There's an API by [alexwohlbruck](https://github.com/alexwohlbruck/cat-facts) to fetch from, so we don't have to build it from scratch. Provide a new route in your server:
 
 ```python
 # in our __init__.py
@@ -267,7 +273,7 @@ Try opening `http://localhost:5000/johndoe`. You'll get an error message like th
   <figcaption>Unhandled 404 page</figcaption>
 </figure>
 
-However, the language is a bit technical. We have to make it casual to the user.
+However, the notification message is a bit "technical". We have to make it casual to the user.
 
 ```python
 # in our __init__.py
@@ -301,9 +307,9 @@ Now, try opening `http://localhost:5000/johndoe` again.
 
 ## Deploying the app with Heroku
 
-Almost there to have our web app published. Unfortunately, Flask is not designed for production environment and cannot effectively handle multiple requests. _But_, previously, we have installed [Green Unicorn](https://github.com/benoitc/gunicorn) (`gunicorn`). This is the answer of what Flask lacks of. `gunicorn` is a Python WSGI HTTP Server that establishes communication between web server and our Python app.
+We're almost there to have our web app published. Unfortunately, Flask is not designed for production environment and cannot effectively handle multiple requests[^5]. _But_, previously, we have installed [Green Unicorn](https://github.com/benoitc/gunicorn) (`gunicorn`). This is the answer to what Flask lacks of. `gunicorn` is a Python WSGI HTTP Server that establishes communication between the web server and our Python app.
 
- Visit [Heroku CLI page](https://devcenter.heroku.com/articles/heroku-cli) if you haven't installed CLI before. Then, create an extensionless file named `Procfile` in the **root** of our project and add this command to order Heroku what to execute on startup:
+ Visit [Heroku CLI page](https://devcenter.heroku.com/articles/heroku-cli) if you haven't installed Heroku CLI before. Then, create an **extensionless** file named `Procfile` in the root of our project and add this command to order Heroku what to execute on startup:
 
 ```text
 # in your Procfile
@@ -312,7 +318,7 @@ web: gunicorn flaskr:app
 ```
 
 > #### In plain English
-> `Procfile`, please run `web` process using `gunicorn` that points out to an `app` named `flaskr`
+> `Procfile`, please run `web` process using `gunicorn` that points out to an `app` called `flaskr`
 
 After that, we wrap all the files into a commit and deploy it:
 
@@ -334,13 +340,13 @@ heroku create
 git push heroku master
 ```
 
-You can visit the link provided by `heroku create` command before. Or if you don't remember, you can visit your [Heroku dashboard](https://dashboard.heroku.com/apps).
+You can visit the link provided by `heroku create` command before (in this case https://stormy-oasis-16157.herokuapp.com/). If you don't remember, you can visit your [Heroku dashboard](https://dashboard.heroku.com/apps).
 
 <figure>
 
 ![Deployed heroku app](./deployed-heroku.png)
 
-  <figcaption>Your site is now live! 🥳</figcaption>
+  <figcaption>Your app is now live! 🥳</figcaption>
 </figure>
 
 Add some styling with CSS to make it fancy:
@@ -352,10 +358,10 @@ Add some styling with CSS to make it fancy:
   <figcaption><a href="https://vyonizr-cat-facts.herokuapp.com/" target="_blank" rel="noopener noreferrer">vyonizr-cat-facts.herokuapp.com</a></figcaption>
 </figure>
 
-And you're done! 🎉 You can check out my repository on [github](https://github.com/vyonizr/flask-cat-facts).
+And you're done! 🎉 The source code above can be found on [my github repository](https://github.com/vyonizr/flask-cat-facts).
 
 [^1]: Github, **_List of companies using Flask framework_** \[website\], https://github.com/rochacbruno/flask-powered, (accessed June 14 2020)
 [^2]: Jinja features automatic HTML escaping to prevent cross-site scripting (XSS) attacks; Wikipedia, **_Jinja (template engine)_** \[website\], https://en.wikipedia.org/wiki/Jinja_(template_engine), (accessed June 14 2020)
 [^3]: Stack Overflow, **_python - What is "pkg-resources==0.0.0" in output of pip freeze command_** \[website\], https://stackoverflow.com/questions/39577984/what-is-pkg-resources-0-0-0-in-output-of-pip-freeze-command , (accessed June 14 2020)
-[^5]: Flask Documentation (1.1.x), **_Static Files_** \[website\], https://flask.palletsprojects.com/en/1.1.x/tutorial/static, (accessed June 20 2020)
-[^6]: vsupalov.com, **_Flask Is Not Your Production Server_** \[website\], https://vsupalov.com/flask-web-server-in-production/, (accessed June 21 2020)
+[^4]: Flask Documentation (1.1.x), **_Static Files_** \[website\], https://flask.palletsprojects.com/en/1.1.x/tutorial/static, (accessed June 20 2020)
+[^5]: vsupalov.com, **_Flask Is Not Your Production Server_** \[website\], https://vsupalov.com/flask-web-server-in-production/, (accessed June 21 2020)
