@@ -94,3 +94,9 @@
   background-color: $lang-html-bg;
   border: none;
 }
+
+.gatsby-highlight[data-language*="text"]::before {
+  color: black;
+  background-color: $lang-text-bg;
+  border: none;
+}
