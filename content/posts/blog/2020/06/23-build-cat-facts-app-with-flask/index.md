@@ -3,7 +3,7 @@ title: "Build Cat Facts App With Flask"
 date: 2020-06-23 10:18:00 +0700
 tags: [python, flask, heroku]
 categories: [Programming]
-last_modified_at: null
+last_modified_at: 2020-06-24 11:48:00 +0700
 description: And how to deploy it to Heroku
 image: ./python-web-stack.png
 ---
@@ -102,6 +102,8 @@ Create a file named `__init__.py` inside `flaskr` folder.
 from flask import Flask
 from flask import render_template
 from flask_cors import CORS
+import requests
+import json
 
 app = Flask(__name__)
 CORS(app)
@@ -147,8 +149,7 @@ We are going to create more than one page and they have some parts in common. Ra
 ```
 
 > #### In plain English
->
-> - Hello, I am `layout.html`. I've got a template for you HTMLs to work. You can fill in the `title`, `content`, and `script` section
+> Hello, I am `layout.html`. I've got a template for you HTMLs to work. You can fill in the `title`, `content`, and `script` section
 
 ```html
 <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/icons8-cat-50.png') }}">
@@ -273,7 +274,7 @@ Try opening `http://localhost:5000/johndoe`. You'll get an error message like th
   <figcaption>Unhandled 404 page</figcaption>
 </figure>
 
-However, the notification message is a bit "technical". We have to make it casual to the user.
+However, the information is a bit “technical”. We have to make it casual to the user.
 
 ```python
 # in our __init__.py
@@ -284,6 +285,8 @@ However, the notification message is a bit "technical". We have to make it casua
 def page_not_found(error):
   return render_template('404.html'), 404
 ```
+
+Create a new page named `404.html`:
 
 ```html
 <!-- /flask-cat-facts/templates/404.html -->
