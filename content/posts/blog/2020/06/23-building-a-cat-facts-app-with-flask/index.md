@@ -1,10 +1,11 @@
 ---
-title: "Build Cat Facts App With Flask"
+title: "Building a Cat Facts App With Flask"
 date: 2020-06-23 10:18:00 +0700
 tags: [python, flask, heroku]
 categories: [Programming]
 last_modified_at: 2020-06-24 11:48:00 +0700
-description: And how to deploy it to Heroku
+description: And deploy it to Heroku
+link: https://github.com/vyonizr/flask-cat-facts
 image: ./python-web-stack.png
 ---
 
