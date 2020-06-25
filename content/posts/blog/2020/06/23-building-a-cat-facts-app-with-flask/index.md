@@ -24,8 +24,6 @@ Before we begin, make sure you have [git](https://git-scm.com/) and Python `3.5`
 
 ## Installation
 
-### Setting up virtual environment (venv)
-
 In Python, it comes in handy if you have an isolated environment for different projects. Every project uses different packages and if you install it globally, your `requirements.txt` aka your "dependency list" will be bloated with unnecessary packages when shared with other collaborators.
 
 1. `Flask` is the framework we are going to build our app upon
@@ -115,7 +113,7 @@ def main():
 ```
 
 1. `Flask(__name__)` creates an instance of Flask. `__name__` refers to the parent directory the file is in, which is `flaskr`.
-2. As previously mentioned, `flask` has templating engine called Jinja. This is useful for rendering HTML pages
+2. As previously mentioned, `flask` has templating engine called Jinja. This is useful for rendering HTML pages.
 3. Invoke `CORS(app)` to enable CORS
 4. Declare a route to the root and serve a page
 
@@ -363,6 +361,8 @@ Add some styling with CSS to make it fancy:
 </figure>
 
 And you're done! 🎉 The source code above can be found on [my github repository](https://github.com/vyonizr/flask-cat-facts).
+
+_This post is also available on [Medium.com](https://link.medium.com/nouBS4d4A7). Any claps are appreciated!_
 
 [^1]: Github, **_List of companies using Flask framework_** \[website\], https://github.com/rochacbruno/flask-powered, (accessed June 14 2020)
 [^2]: Jinja features automatic HTML escaping to prevent cross-site scripting (XSS) attacks; Wikipedia, **_Jinja (template engine)_** \[website\], https://en.wikipedia.org/wiki/Jinja_(template_engine), (accessed June 14 2020)
