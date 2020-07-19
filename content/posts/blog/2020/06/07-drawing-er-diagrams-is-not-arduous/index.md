@@ -151,6 +151,6 @@ ALTER TABLE "rents" ADD FOREIGN KEY ("book_id") REFERENCES "books" ("id");
 
 Despite its convenience, it does not come with no flaws. The relation lines are a bit awkward and become tangled when it comes to complex diagrams. We have to move the tables to the right place because the "Auto-arrange" feature does not work well at this moment. No "bridge" on line intersection makes it a bit tricky to trace. Though, there's a workaround by hovering over a table to highlight its relations or enable the "Highlight" button. But overall, I would say this is a very useful tool, especially for back end developers!
 
-_Originally published at [LinkedIn](https://www.linkedin.com/posts/fitrahtur-rahman_database-schema-sql-activity-6666215807799873536-jXMH) on May 13 2020_
+*Originally published at [LinkedIn](https://www.linkedin.com/posts/fitrahtur-rahman_database-schema-sql-activity-6666215807799873536-jXMH) on May 13 2020*
 
 [^1]: DBML, **_DBML - Database Markup Language_** \[website\], https://www.dbml.org/, (accessed June 7 2020)
